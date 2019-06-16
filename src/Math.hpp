@@ -15,6 +15,8 @@ namespace Celestia {
 
 		double distance (Vector3d vec1, Vector3d vec2);
 		double magnitude (Vector3d vec);
+		Vector3d cross (Vector3d vec1, Vector3d vec2);
+		double dot (Vector3d vec1, Vector3d vec2);
 	};
 }
 
