@@ -6,11 +6,11 @@
 
 namespace Celestia {
 	class Graphics {
-
 	public:
-	Graphics ();
+		Graphics ();
+		void draw ();
+		void update ();
 	};
 }
 
 #endif /* Graphics.hpp */
-

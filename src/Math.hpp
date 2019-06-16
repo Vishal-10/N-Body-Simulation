@@ -2,17 +2,20 @@
 #define Math_hpp
 
 #include <cmath>
-#include <Eigen/Core>
+#include <vector>
+#include "Eigen/Core"
+#include "Body.hpp"
+
+using Eigen::Vector3d;
 
 namespace Celestia {
 	class Math {
-	private:
-		float x, y, z;
-		float ux, uy, uz;
 	public:
 		Math ();
+
+		double distance (Vector3d vec1, Vector3d vec2);
+		double magnitude (Vector3d vec);
 	};
 }
 
 #endif /* Math.hpp */
-

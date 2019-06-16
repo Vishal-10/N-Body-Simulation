@@ -1,6 +1,6 @@
 n_body_sources = [
   'Body.hpp',
-  'Constant.hpp',
+  'Constants.hpp',
   'Main.cpp',
   'Math.cpp',
   'Math.hpp',

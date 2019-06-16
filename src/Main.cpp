@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <cstdio>
 #include "Body.hpp"
-#include "Constant.hpp"
+#include "Constants.hpp"
 #include "Graphics.hpp"
 #include "Math.hpp"
 
