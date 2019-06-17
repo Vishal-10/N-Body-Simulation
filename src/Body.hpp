@@ -15,7 +15,7 @@ namespace Celestia {
 		Vector3d velocity;
 		Vector3d acceleration;
 
-		Body ():mass (0),radius (0),position (0,0,0),velocity (0,0,0) {}
+		Body ():mass (0),radius (0),position (0, 0, 0),velocity (0, 0, 0), acceleration (0, 0, 0) {}
 
 		void operator= (const Body& body) {
 			mass = body.mass;
