@@ -11,13 +11,15 @@
 namespace Celestia {
 	class Simulator {
 	public:
+		std::vector <Celestia::Body> bodies;
 		double T;
 		double dt;
 
-		Simulator(): T(10), dt(0.001) {}
+		Simulator(std::vector <Celestia::Body> bodies, double T, double dt);
 
 		double gravitional_force (const Body& body1, const Body& body2);
-		void run (std::vector <Celestia::Body> body);
+		void move (std::vector <Celestia::Body> body);
+		void run ();
 	};
 }
 

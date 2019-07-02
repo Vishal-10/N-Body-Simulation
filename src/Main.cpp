@@ -15,19 +15,19 @@ int main (int argc, char **argv) {
 	cout << argv[0] << endl;
 
 	Celestia::Math math;
-	std::vector <Celestia::Body> body;
+	std::vector <Celestia::Body> bodies;
 
  	std::vector <double> input1 = {1, 0, 0, 0, 0.5, 0};
 	std::vector <double> input2 = {-1, 0, 0, 0, -0.5, 0};
 
-	body.push_back(Celestia::Body());
-	body[0].default_create (input1);
-	body.push_back(Celestia::Body());
-	body[1].default_create (input2);
+	bodies.push_back(Celestia::Body());
+	bodies[0].default_create (input1);
+	bodies.push_back(Celestia::Body());
+	bodies[1].default_create (input2);
 
-	Celestia::Simulator sim;
-	cout << "Testing Simulator" << endl;
-	sim.run (body);
+	Celestia::Simulator sim (bodies, 10, 0.001);
+	cout << "Testing Simulator: Run begins" << endl;
+	sim.run ();
 	cout << "Run End" << endl;
 
 	return 0;
