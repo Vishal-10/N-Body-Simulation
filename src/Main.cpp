@@ -5,6 +5,7 @@
 #include "Constants.hpp"
 #include "Graphics.hpp"
 #include "Math.hpp"
+#include "Simulator.hpp"
 
 using std::cout;
 using std::endl;
@@ -19,7 +20,6 @@ int main (int argc, char **argv) {
 
 	Celestia::Math math;
 	std::vector <Celestia::Body> body;
-	Celestia::Constants constant;
 
 	Vector3d xunit = math.unit (x);
 	Vector3d yunit = math.unit (y);
@@ -31,7 +31,7 @@ int main (int argc, char **argv) {
 	body[0].create (input1);
 	body.push_back(Celestia::Body());
 	body[1].create (input2);
-
+/*
 	cout << "Testing Math" << endl;
 	cout << "Vector x:\n" << x << endl;
 	cout << "Vector y:\n" << y << endl;
@@ -50,8 +50,8 @@ int main (int argc, char **argv) {
 	cout << "~~~~~~~~~~~~~~~~" << endl;
 
 	cout << "Testing Constants" << endl;
-	cout << "Constant G = " << constant.G << endl;
-	cout << "Constant e = " << constant.e << endl;
+	cout << "Constant G = " << Celestia::Constants::Gravity << endl;
+	cout << "Constant e = " << Celestia::Constants::Elasticity << endl;
 
 	cout << "~~~~~~~~~~~~~~~~" << endl;
 
@@ -59,7 +59,11 @@ int main (int argc, char **argv) {
 	for (int i = 0; i < 2; i++) {
 		cout << "Body " << i <<" to string: " << body[i].to_string() << endl;
 		cout << "Body " << i <<" Acceleration:\n" << body[i].acceleration << endl;
+		cout << "Vector Body "<< " i " <<":\n" << body[i].position << endl;
 	}
+*/
+	Celestia::Simulator sim;
+	cout << "Testing Simulator" << endl;
 
 	return 0;
 }
