@@ -1,4 +1,4 @@
-project('n-body', ['cpp', 'c'],
+project('n-body', ['cpp', 'c', 'cuda'],
         version: '0.1.0',
   meson_version: '>= 0.40.0',
 default_options: [ 'c_std=gnu11',

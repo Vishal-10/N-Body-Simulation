@@ -1,6 +1,7 @@
 #ifndef Graphics_hpp
 #define Graphics_hpp
 
+#include "cuda.h"
 #include "cuda_runtime.h"
 #include <GL/glut.h>
 
