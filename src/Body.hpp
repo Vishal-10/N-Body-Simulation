@@ -32,15 +32,29 @@ namespace Celestia {
 			velocity << inp[5], inp[6], inp[7];
 		}
 
+		void default_create (const std::vector<double> &inp) {
+			mass = 1;
+			radius = 1;
+			position << inp[0], inp[1], inp[2];
+			velocity << inp[3], inp[4], inp[5];
+		}
+
 		void reset () {
 			acceleration << 0, 0, 0;
 		}
 
-		std::string to_string () const {
+		std::string to_string_ext () const {
 			std::stringstream iostr;
 			iostr << mass << " " << radius << " " << position[0]
 			<< " " << position[1] << " " << position[2] << " "
 			<< velocity[0] << " " << velocity[1] << " " << velocity[2];
+			return iostr.str ();
+		}
+
+		std::string to_string () const {
+			std::stringstream iostr;
+			iostr << position[0] << " " << position[1] << " " << position[2]
+			<< " "	<< velocity[0] << " " << velocity[1] << " " << velocity[2];
 			return iostr.str ();
 		}
 	};

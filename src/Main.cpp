@@ -24,13 +24,13 @@ int main (int argc, char **argv) {
 	Vector3d xunit = math.unit (x);
 	Vector3d yunit = math.unit (y);
 
- 	std::vector <double> input1 = {1, 1, 1, 0, 0, 0, 0, 0};
-	std::vector <double> input2 = {1, 1, -1, 0, 0, 0, 0, 0};
+ 	std::vector <double> input1 = {1, 0, 0, 0, 0, 0};
+	std::vector <double> input2 = {-1, 0, 0, 0, 0, 0};
 
 	body.push_back(Celestia::Body());
-	body[0].create (input1);
+	body[0].default_create (input1);
 	body.push_back(Celestia::Body());
-	body[1].create (input2);
+	body[1].default_create (input2);
 /*
 	cout << "Testing Math" << endl;
 	cout << "Vector x:\n" << x << endl;
