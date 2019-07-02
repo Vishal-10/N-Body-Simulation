@@ -64,6 +64,7 @@ int main (int argc, char **argv) {
 */
 	Celestia::Simulator sim;
 	cout << "Testing Simulator" << endl;
+	sim.run (body);
 
 	return 0;
 }
