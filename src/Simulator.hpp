@@ -8,8 +8,6 @@
 #include "Body.hpp"
 #include "Constants.hpp"
 
-using Eigen::Vector3d;
-
 namespace Celestia {
 	class Simulator {
 	public:
@@ -21,6 +19,7 @@ namespace Celestia {
 		double gravitional_force (const Body& body1, const Body& body2);
 		void set_acceleration (Body& body1, Body& body2);
 		void move (Body& body1, Body& body2);
+		void run (std::vector <Celestia::Body> body);
 	};
 }
 
