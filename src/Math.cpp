@@ -6,16 +6,16 @@ Vector3d Celestia::Math::delta (Vector3d vec1, Vector3d vec2) {
 
 double Celestia::Math::distance (Vector3d vec1, Vector3d vec2) {
 	Vector3d difference = vec1 - vec2;
-	return sqrt (difference.dot (difference));
+	return magnitude(difference);
 }
 
 double Celestia::Math::sq_distance (Vector3d vec1, Vector3d vec2) {
 	Vector3d difference = vec1 - vec2;
-	return difference.dot (difference);
+	return difference.squaredNorm ();
 }
 
 double Celestia::Math::magnitude (Vector3d vec) {
-	return sqrt (vec.dot (vec));
+	return vec.norm ();
 }
 
 Vector3d Celestia::Math::cross (Vector3d vec1, Vector3d vec2) {
@@ -31,10 +31,10 @@ Vector3d Celestia::Math::scalar (double scalar, Vector3d vec) {
 }
 
 Vector3d Celestia::Math::unit (Vector3d vec) {
-	return vec/(Celestia::Math::magnitude (vec));
+	return vec/(magnitude (vec));
 }
 
 void Celestia::Math::integrate (Vector3d& position, Vector3d& velocity, const Vector3d acceleration, double dt) {
-	velocity += Celestia::Math::scalar (dt, acceleration);
-	position += Celestia::Math::scalar (dt, velocity) + Celestia::Math::scalar (dt * dt / 2, acceleration);
+	velocity += scalar (dt, acceleration);
+	position += (scalar (dt, velocity) + scalar ((dt * dt) / 2, acceleration));
 }
