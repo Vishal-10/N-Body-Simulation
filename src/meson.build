@@ -5,7 +5,9 @@ n_body_sources = [
   'Math.cpp',
   'Math.hpp',
   'Graphics.cpp',
-  'Graphics.hpp'
+  'Graphics.hpp',
+  'Simulator.cpp',
+  'Simulator.hpp'
 ]
 
 n_body_dependencies = [
