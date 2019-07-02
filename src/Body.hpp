@@ -15,7 +15,7 @@ namespace Celestia {
 		Vector3d velocity;
 		Vector3d acceleration;
 
-		Body ():mass (0),radius (0),position (0, 0, 0),velocity (0, 0, 0), acceleration (0, 0, 0) {}
+		Body ():mass (1),radius (1),position (0, 0, 0),velocity (0, 0, 0), acceleration (0, 0, 0) {}
 
 		void operator= (const Body& body) {
 			mass = body.mass;
@@ -33,8 +33,6 @@ namespace Celestia {
 		}
 
 		void default_create (const std::vector<double> &inp) {
-			mass = 1;
-			radius = 1;
 			position << inp[0], inp[1], inp[2];
 			velocity << inp[3], inp[4], inp[5];
 		}
