@@ -17,8 +17,6 @@ namespace Celestia {
 		Simulator(): T(10), dt(0.001) {}
 
 		double gravitional_force (const Body& body1, const Body& body2);
-		void set_acceleration (Body& body1, Body& body2);
-		void move (Body& body1, Body& body2);
 		void run (std::vector <Celestia::Body> body);
 	};
 }
