@@ -1,7 +1,5 @@
 #include "Math.hpp"
 
-Celestia::Math::Math () {}
-
 Vector3d Celestia::Math::delta (Vector3d vec1, Vector3d vec2) {
 	return vec2 - vec1;
 }
@@ -34,4 +32,9 @@ Vector3d Celestia::Math::scalar (double scalar, Vector3d vec) {
 
 Vector3d Celestia::Math::unit (Vector3d vec) {
 	return vec/(Celestia::Math::magnitude (vec));
+}
+
+void Celestia::Math::integrate (Vector3d& position, Vector3d& velocity, const Vector3d acceleration, double dt) {
+	velocity += Celestia::Math::scalar (dt, acceleration);
+	position += Celestia::Math::scalar (dt, velocity) + Celestia::Math::scalar (dt * dt / 2, acceleration);
 }

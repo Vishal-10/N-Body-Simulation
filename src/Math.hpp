@@ -11,16 +11,20 @@ using Eigen::Vector3d;
 namespace Celestia {
 	class Math {
 	public:
-		Math ();
 
-		Vector3d delta (Vector3d vec1, Vector3d vec2);
-		double distance (Vector3d vec1, Vector3d vec2);
-		double sq_distance (Vector3d vec1, Vector3d vec2);
-		double magnitude (Vector3d vec);
-		Vector3d cross (Vector3d vec1, Vector3d vec2);
-		double dot (Vector3d vec1, Vector3d vec2);
-		Vector3d scalar (double scalar, Vector3d vec);
-		Vector3d unit (Vector3d);
+		static Vector3d delta (Vector3d vec1, Vector3d vec2);
+		static double distance (Vector3d vec1, Vector3d vec2);
+		static double sq_distance (Vector3d vec1, Vector3d vec2);
+		static double magnitude (Vector3d vec);
+		static double sq_magnitude (Vector3d vec);
+		static Vector3d cross (Vector3d vec1, Vector3d vec2);
+		static double dot (Vector3d vec1, Vector3d vec2);
+		static Vector3d scalar (double scalar, Vector3d vec);
+		static Vector3d unit (Vector3d vec);
+		static void integrate (Vector3d& position,
+							   Vector3d& velocity,
+							   const Vector3d acceleration,
+							   double dt);
 	};
 }
 
