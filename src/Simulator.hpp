@@ -3,6 +3,8 @@
 
 #include <cmath>
 #include <vector>
+#include <iostream>
+#include "cuda_runtime.h"
 #include "Eigen/Dense"
 #include "Math.hpp"
 #include "Body.hpp"

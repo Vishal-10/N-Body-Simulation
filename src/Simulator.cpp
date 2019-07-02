@@ -1,5 +1,4 @@
 #include "Simulator.hpp"
-#include <iostream>
 
 Celestia::Simulator::Simulator (std::vector <Celestia::Body> bodies, double T, double dt) {
 	Celestia::Simulator::bodies = bodies;
@@ -12,6 +11,7 @@ double Celestia::Simulator::gravitional_force (const Body& body1, const Body& bo
 	return force;
 }
 
+__global__
 void Celestia::Simulator::move (std::vector <Celestia::Body> bodies) {
 	for (double t = 0; t < T; t += dt) {
 		for (auto it = bodies.begin() ; it != bodies.end() ; ++it)
