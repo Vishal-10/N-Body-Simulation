@@ -51,8 +51,8 @@ namespace Celestia {
 
 		std::string to_string () const {
 			std::stringstream iostr;
-			iostr << position[0] << " " << position[1] << " " << position[2]
-			<< " "	<< velocity[0] << " " << velocity[1] << " " << velocity[2];
+			iostr << position[0] << " " << position[1] << " " << position[2]/*
+			<< " "	<< velocity[0] << " " << velocity[1] << " " << velocity[2]*/;
 			return iostr.str ();
 		}
 	};
