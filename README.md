@@ -43,7 +43,7 @@ Test your changes! Run your changes against any existing tests if they exist and
 ###  Steps to make a Pull Request
 
 ```bash
-git clone https://github.com/your_github_username/openfloodai.github.io.git
+git clone https://github.com/your_github_username/N-Body-Simulation.git
 
 cd openfloodai.github.io
 
