@@ -39,11 +39,13 @@ Vector3d Celestia::Math::unit (Vector3d vec) {
 }
 
 void Celestia::Math::integrate (Vector3d& position, Vector3d& velocity, const Vector3d acceleration, double dt) {
-//	velocity += scalar (dt, acceleration);
-//	position += (scalar (dt, velocity) + scalar ((dt * dt) / 2, acceleration));
+    // leap frog	
+	velocity += 1/4 * scalar (dt, acceleration);
+	position += 1/3 * scalar (dt, velocity);
+	velocity += 1/4 * scalar (dt, acceleration);
+	position += 1/3 * scalar (dt, velocity);
+	velocity += 1/4 * scalar (dt, acceleration);
+	position += 1/3 * scalar (dt, acceleration);
+	velocity += 1/4 * scalar (dt, acceleration);
 
-//leap frog
-	velocity += 1/2 * scalar (dt, acceleration);
-	position += scalar (dt, velocity);
-	velocity += 1/2 * scalar (dt, acceleration);
 }

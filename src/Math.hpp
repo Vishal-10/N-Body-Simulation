@@ -27,3 +27,5 @@ namespace Celestia {
 							   double dt);
 	};
 }
+
+#endif /* Math.hpp */
